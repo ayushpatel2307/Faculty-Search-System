@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".Main3">-->
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textViewname"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewname"-->
+<!--        app:srcCompat="@drawable/col"-->
+<!--        tools:layout_editor_absoluteX="25dp"-->
+<!--        tools:layout_editor_absoluteY="31dp" />-->
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textViewemail"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewemail"-->
+<!--        app:srcCompat="@drawable/col"-->
+<!--        tools:layout_editor_absoluteX="25dp"-->
+<!--        tools:layout_editor_absoluteY="31dp" />-->
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textViewempid"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewempid"-->
+<!--        app:srcCompat="@drawable/col"-->
+<!--        tools:layout_editor_absoluteX="25dp"-->
+<!--        tools:layout_editor_absoluteY="31dp" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/textViewname"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/textViewemail"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.50"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.2" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewemail"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewempid"-->
+<!--        tools:layout_editor_absoluteX="28dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewphd"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewmtech"-->
+<!--        tools:layout_editor_absoluteX="29dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewmtech"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewbtech"-->
+<!--        tools:layout_editor_absoluteX="29dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewgsid"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewscopusid"-->
+<!--        tools:layout_editor_absoluteX="29dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewbtech"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewemail"-->
+<!--        tools:layout_editor_absoluteX="29dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewempid"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewname"-->
+<!--        tools:layout_editor_absoluteX="29dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textVieworcid"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewphd"-->
+<!--        tools:layout_editor_absoluteX="28dp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewscopusid"-->
+<!--        android:layout_width="360dp"-->
+<!--        android:layout_height="70dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textVieworcid"-->
+<!--        tools:layout_editor_absoluteX="28dp" />-->
+
+
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager" />
+
+</FrameLayout>

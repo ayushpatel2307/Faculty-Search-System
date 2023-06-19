@@ -1,11 +1,14 @@
 package com.example.facultysearchsystem1
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.facultysearchsystem1.CustomAdapter2
 import com.example.facultysearchsystem1.ItemsViewModel2
 import com.example.facultysearchsystem1.R
+import com.google.firebase.FirebaseApp
+import com.google.firebase.database.*
 
 //package com.example.facultysearchsystem1
 //
@@ -135,40 +138,42 @@ class Main3 : AppCompatActivity() {
 
         val data = ArrayList<ItemsViewModel2>()
 
-        val f = listOf(
-            "Name: ",
-            "EMP NO.: ",
-            "EMP EMAIL: ",
-            "B.TECH.: ",
-            "M.TECH.: ",
-            "PHD: ",
-            "ORCHID ID: ",
-            "SCOPUS ID: ",
-            "GS ID: "
-        )
-        val f1 = listOf(
-            "Praveen Joe I R",
-            "5396",
-            "praveen.joe@vit.ac.in",
-            "vit",
-            "vit",
-            "vit",
-            "orid",
-            "scid",
-            "gogsid"
-        )
-        val value = intent.getStringExtra("key").toString()
 
-        if (value == "f1.1") {
-            var a = 0
-            for (i in f1) {
-                data.add(ItemsViewModel2(f[a] +  i))
-                a++
+
+        val value = intent.getStringExtra("key").toString()
+        val rootRef = FirebaseDatabase.getInstance().reference
+        val hotelRef = rootRef.child("facultydetails")
+        val eventListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (ds in dataSnapshot.children) {
+                    val fname = ds.child("NAME").getValue(String::class.java)
+                    if(fname.toString() == value) {
+                        val femail = ds.child("EMAIL").getValue(String::class.java)
+//                        val fname = ds.child("NAME").getValue(String::class.java)
+                        val fbtech = ds.child("B TECH").getValue(String::class.java)
+                        val fmtech = ds.child("M TECH").getValue(String::class.java)
+                        val fresarea = ds.child("RESEARCH AREA").getValue(String::class.java)
+                        val fgsid = ds.child("GS").getValue(String::class.java)
+                        val fscopussid = ds.child("SCOPUS").getValue(String::class.java)
+                        val forcid = ds.child("ORCID").getValue(String::class.java)
+                        val fphd = ds.child("PHD").getValue(String::class.java)
+
+                        Log.d(
+                            "TAG",
+                            " $fname/$femail / $fbtech/$fmtech/$fresarea / $fgsid/$fscopussid/$forcid / $fphd"
+                        )
+                    }
+                }
             }
-            a=0
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.e("Firebase", "Error getting data: ${databaseError.message}")
+            }
         }
+        hotelRef.addListenerForSingleValueEvent(eventListener)
 
         val adapter = CustomAdapter2(data)
         recyclerview.adapter = adapter
+
+//    )
     }
 }

@@ -60,7 +60,7 @@ class Main2 : AppCompatActivity() {
                 data.add(ItemsViewModel(i))
 //                Log.d("TAGget_in_main2", "hel0lo")
             }
-            val adapter = CustomAdapter(data) { view ->
+            val adapter = CustomAdapter2(data) { view ->
             }
 //            val adapter = CustomAdapter(data/*, View.OnClickListener {}, object : CustomAdapter.OnItemClickListener*/ {
 //                override fun onItemClick(item: ItemsViewModel) {
@@ -72,11 +72,11 @@ class Main2 : AppCompatActivity() {
 
             recyclerview.adapter = adapter
         }
-        fun onItemClick(item: ItemsViewModel) {
-            val intent = Intent(this, Main3::class.java)
-            intent.putExtra("key", item.text)
-            startActivity(intent)
-        }
+//        fun onItemClick(item: ItemsViewModel) {
+//            val intent = Intent(this, Main3::class.java)
+//            intent.putExtra("key", item.text)
+//            startActivity(intent)
+//        }
 
 
     }

@@ -45,9 +45,9 @@ private fun getFacultyList(value: String, callback: (List<String>) -> Unit) {
 }
 class CustomAdapter(private val mList: List<ItemsViewModel>, private val itemClickListener: ((View) -> Unit)? = null,private val listener: View.OnClickListener) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
     public lateinit var researcharea: String
-    interface OnItemClickListener {
-        fun onItemClick(item: ItemsViewModel)
-    }
+//    interface OnItemClickListener {
+//        fun onItemClick(item: ItemsViewModel)
+//    }
 //class CustomAdapter(private val mList: List<ItemsViewModel>, private val listener: View.OnClickListener, private val itemClickListener: OnItemClickListener) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 //
 //    public lateinit var researcharea: String
@@ -106,10 +106,10 @@ class CustomAdapter(private val mList: List<ItemsViewModel>, private val itemCli
 //            }
 
         }
-        holder.textView.setOnClickListener {
-            // Call the click listener when the item is clicked
-//            onItemClickListener?.onItemClick(mList[position])
-        }
+//        holder.textView.setOnClickListener {
+//            // Call the click listener when the item is clicked
+////            onItemClickListener?.onItemClick(mList[position])
+//        }
 
     }
 

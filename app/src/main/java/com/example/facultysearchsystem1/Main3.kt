@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.facultysearchsystem1.CustomAdapter2
 import com.example.facultysearchsystem1.ItemsViewModel2
+import com.example.facultysearchsystem1.Main2.Companion.value
 import com.example.facultysearchsystem1.R
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.*
@@ -135,12 +136,15 @@ class Main3 : AppCompatActivity() {
 
         val recyclerview = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerview.layoutManager = LinearLayoutManager(this)
-
-        val data = ArrayList<ItemsViewModel2>()
-
-
-
         val value = intent.getStringExtra("key").toString()
+        val data = ArrayList<ItemsViewModel>()
+        Log.d(
+            "TAGvvv",
+            "$value"
+        )
+
+
+
         val rootRef = FirebaseDatabase.getInstance().reference
         val hotelRef = rootRef.child("facultydetails")
         val eventListener = object : ValueEventListener {
@@ -157,11 +161,23 @@ class Main3 : AppCompatActivity() {
                         val fscopussid = ds.child("SCOPUS").getValue(String::class.java)
                         val forcid = ds.child("ORCID").getValue(String::class.java)
                         val fphd = ds.child("PHD").getValue(String::class.java)
+                        data.add(ItemsViewModel("Name: " +fname.toString()))
+                        data.add(ItemsViewModel("Email: " +femail.toString()))
+                        data.add(ItemsViewModel("Research Area: " +fresarea.toString()))
+                        data.add(ItemsViewModel("BTech: " +fbtech.toString()))
+                        data.add(ItemsViewModel("MTech: " +fmtech.toString()))
 
+                        data.add(ItemsViewModel("PHD: " +fphd.toString()))
+                        data.add(ItemsViewModel("GS ID: " +fgsid.toString()))
+                        data.add(ItemsViewModel("SCOPUS ID: " +fscopussid.toString()))
+                        data.add(ItemsViewModel("ORCID ID: " +forcid.toString()))
                         Log.d(
                             "TAG",
                             " $fname/$femail / $fbtech/$fmtech/$fresarea / $fgsid/$fscopussid/$forcid / $fphd"
                         )
+                        val adapter = CustomAdapter2(data){ view ->
+                        }
+                        recyclerview.adapter = adapter
                     }
                 }
             }
@@ -171,8 +187,8 @@ class Main3 : AppCompatActivity() {
         }
         hotelRef.addListenerForSingleValueEvent(eventListener)
 
-        val adapter = CustomAdapter2(data)
-        recyclerview.adapter = adapter
+
+
 
 //    )
     }

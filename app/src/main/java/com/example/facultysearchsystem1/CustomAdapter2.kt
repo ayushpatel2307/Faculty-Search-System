@@ -17,7 +17,6 @@ import kotlinx.coroutines.Dispatchers.Main
 private fun getFacultyList(value: String, callback: (List<String>) -> Unit) {
     val facultylist = mutableListOf<String>()
 
-    // your existing code
     val rootRef = FirebaseDatabase.getInstance().reference
     val hotelRef = rootRef.child("facultydetails")
     val eventListener = object : ValueEventListener {
@@ -27,7 +26,6 @@ private fun getFacultyList(value: String, callback: (List<String>) -> Unit) {
                 val fresarea = ds.child("RESEARCH AREA").getValue(String::class.java)
                 if (value.toString() == fresarea.toString()) {
                     facultylist.add(fname!!)
-//                    Log.d("TAGoutca2", " $fname//$fresarea")
                 }
             }
             callback(facultylist)
@@ -40,7 +38,7 @@ private fun getFacultyList(value: String, callback: (List<String>) -> Unit) {
     }
     hotelRef.addListenerForSingleValueEvent(eventListener)
 }
-//class CustomAdapter2(private val mList: List<ItemsViewModel>) : RecyclerView.Adapter<CustomAdapter2.ViewHolder>(){
+
 class CustomAdapter2(private val mList: List<ItemsViewModel>, private val itemClickListener: ((View) -> Unit)? = null,private val listener: View.OnClickListener) : RecyclerView.Adapter<CustomAdapter2.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -56,24 +54,11 @@ class CustomAdapter2(private val mList: List<ItemsViewModel>, private val itemCl
         // TODO: Implement this method
         val ItemsViewModel = mList[position]
 
-        // sets the text to the textview from our itemHolder class
         holder.textView.text = ItemsViewModel.text
-
-
-
-//        Log.d("TAG", " $value")
+        holder.imageView.setImageResource(ItemsViewModel.imageView)
         var k = Main2.value
         holder.textView.setOnClickListener {
             val item = mList[position]
-//            for (i in ra) {
-//                if (item.text.toString() == i) {
-//                    val intent = Intent(holder.itemView.context, Main2::class.java)
-//                    intent.putExtra("key", item.text)
-//                    holder.itemView.context.startActivity(intent)
-//                    k = item.text
-////                    Log.d("TAGca_first_forloop", "hello/$k")
-//                }
-//            }
 
             getFacultyList(k) { facultylist ->
 
@@ -89,13 +74,6 @@ class CustomAdapter2(private val mList: List<ItemsViewModel>, private val itemCl
             }
 
         }
-//        holder.textView.setOnClickListener {
-//            // Call the click listener when the item is clicked
-////            onItemClickListener?.onItemClick(mList[position])
-//        }
-//        holder.textView.maxLines = 2
-//        holder.textView.singleLine = false
-//        holder.textView.maxLines = Integer.MAX_VALUE
     }
 
     override fun getItemCount(): Int {
@@ -104,8 +82,8 @@ class CustomAdapter2(private val mList: List<ItemsViewModel>, private val itemCl
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // TODO: Implement this class
-//        val imageView: ImageView = itemView.findViewById(R.id.imageview)
+
         val textView: TextView = itemView.findViewById(R.id.textView)
+        val imageView: ImageView = itemView.findViewById(R.id.imageView2)
     }
 }

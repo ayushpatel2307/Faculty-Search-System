@@ -38,14 +38,12 @@ private fun getFacultyList(value: String, callback: (List<String>) -> Unit) {
     hotelRef.addListenerForSingleValueEvent(eventListener)
 }
 class Main2 : AppCompatActivity() {
-//    private var resarea: String = ""
     companion object {
-//        var facultylist = mutableListOf<String>("hello")
         var value = String()
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_main)
         val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
 
         recyclerview.layoutManager = LinearLayoutManager(this)
@@ -55,29 +53,14 @@ class Main2 : AppCompatActivity() {
         value = intent.getStringExtra("key").toString()
 
         getFacultyList(value) { facultylist ->
-//            // do something with the facultylist here
             for (i in facultylist) {
-                data.add(ItemsViewModel(i))
-//                Log.d("TAGget_in_main2", "hel0lo")
+                data.add(ItemsViewModel(i,R.drawable.fa4))
             }
             val adapter = CustomAdapter2(data) { view ->
             }
-//            val adapter = CustomAdapter(data/*, View.OnClickListener {}, object : CustomAdapter.OnItemClickListener*/ {
-//                override fun onItemClick(item: ItemsViewModel) {
-////                    val intent = Intent(this, Main3::class.java)
-////                    intent.putExtra("key", item.text)
-////                    startActivity(intent)
-//                }
-
 
             recyclerview.adapter = adapter
         }
-//        fun onItemClick(item: ItemsViewModel) {
-//            val intent = Intent(this, Main3::class.java)
-//            intent.putExtra("key", item.text)
-//            startActivity(intent)
-//        }
-
 
     }
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Faculty Search System1</string>
+    <string name="app_name">Faculty Finder</string>
     <string name="title_activity_2">Activity2</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

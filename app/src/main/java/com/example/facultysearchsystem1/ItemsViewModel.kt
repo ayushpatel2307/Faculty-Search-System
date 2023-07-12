@@ -1,4 +1,6 @@
 package com.example.facultysearchsystem1
 
-data class ItemsViewModel( val text: String) {
+import android.media.Image
+
+data class ItemsViewModel( val text: String, val imageView: Int) {
 }

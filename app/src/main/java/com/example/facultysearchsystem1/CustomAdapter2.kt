@@ -24,7 +24,7 @@ private fun getFacultyList(value: String, callback: (List<String>) -> Unit) {
             for (ds in dataSnapshot.children) {
                 val fname = ds.child("NAME").getValue(String::class.java)
                 val fresarea = ds.child("RESEARCH AREA").getValue(String::class.java)
-                if (value.toString() == fresarea.toString()) {
+                if (fname != null && fresarea != null && (fname.contains(value, ignoreCase = true) || fresarea.contains(value, ignoreCase = true))) {
                     facultylist.add(fname!!)
                 }
             }

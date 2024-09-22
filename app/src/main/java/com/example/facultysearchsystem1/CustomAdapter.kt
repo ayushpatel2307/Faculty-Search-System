@@ -55,7 +55,7 @@ class CustomAdapter(private val mList: List<ItemsViewModel>, private val itemCli
 
     // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val ra = listOf("Artificial Intelligence", "Network and Security", "Imaging and Computer Vision", "Cyber Physical Systems", "Data Analytics")
+        val ra = listOf("Artificial Intelligence", "Network and Security", "Imaging and Computer Vision", "Cyber Physical Systems", "Data Analytics","Machine Learning","Deep Learning","Internet Of Things", "Cloud Computing")
         val ItemsViewModel = mList[position]
         holder.textView.text = ItemsViewModel.text
         holder.imageView.setImageResource(ItemsViewModel.imageView)

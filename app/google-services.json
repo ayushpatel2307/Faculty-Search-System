@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "627696829981",
+    "project_id": "faculty-search-system1",
+    "storage_bucket": "faculty-search-system1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627696829981:android:2863cdf56d7e10a98168f4",
+        "android_client_info": {
+          "package_name": "com.example.facultysearchsystem1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627696829981-la43hnrs5o0p8n5n4os2d18ftteht8m2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUCXoKXA0a626glMDlXf6fXADdcOPjgRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627696829981-la43hnrs5o0p8n5n4os2d18ftteht8m2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
